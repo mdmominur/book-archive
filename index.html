@@ -9,22 +9,27 @@
 </head>
 <body>
     <main>
-        <section class="container mt-4">
-            <h1 class="text-center">Online Book Store</h1>
+        <section class="container bg-light px-md-5 shadow rounded mt-5">
+            <h1 class="text-center pt-5">Online Book Store</h1>
             <!-- Search box start -->
                 <div class="d-flex flex-column align-items-center">
                     <p>Search Your Books Here...</p>
-                    <form class="d-flex w-50">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="button">Search</button>
-                    </form>
+                    <div class="d-flex col-md-6">
+                        <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" id="searchBtn" type="button">Search</button>
+                    </div>
                 </div>
 
             <!-- Result section -->
-                <div>
-                    <div id="errorMsg"></div>
-                    <div id="totalResult"></div>
-                    <div id="allResults">
+                <div class="mt-4">
+                    <div class="d-flex justify-content-center" >
+                        <div class="spinner-border text-success d-none" role="status" id="spinner">
+                            <span class="visually-hidden">Loading...</span>
+                          </div>
+                    </div>
+                    <p id="errorMsg" class="fw-bold text-danger text-center"></p>
+                    <p id="totalResult" class="mt-5"></p>
+                    <div id="allResults" class="row mt-2">
 
                     </div>
                 </div>
