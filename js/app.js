@@ -46,7 +46,7 @@ document.getElementById('searchBtn').addEventListener('click', ()=>{
         errorMsg.innerText = "Search field can not be empty";
         return;
     }
-    fetch(`http://openlibrary.org/search.json?q=${searchValue}`)
+    fetch(`https://openlibrary.org/search.json?q=${searchValue}`)
     .then(res => res.json())
     .then(data => displayBooks(data.docs, data.numFound));
     searchInput.value = "";
