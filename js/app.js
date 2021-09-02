@@ -19,7 +19,7 @@ function spinnerToggle(displayValue){
 //Checking properties undefined or not
 const checkProperties = property =>{
     if(property !== undefined && property.length !== 0){
-        if(typeof property != 'object'){
+        if(typeof property !== 'object'){
             return property;
         }
         return property[0];
